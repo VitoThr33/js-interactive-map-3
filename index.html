@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+
+
+<script src="map.js" defer></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+
+
+<style>
+    #map { 
+        height: 90vh;
+    }
+    #map::before{
+        content: 'Please Wait Loading';
+        width: 100%;
+        text-align: center;
+         position:fixed ;
+        margin-top: 7em;
+        font-size: 9em;
+       
+    }
+   
+  </style>
+</head>
+<body>
+<form>
+    <label for="business">Choose a Business:</label>
+    <select id="business" name="business">
+      <option value="coffee">Coffee</option>
+      <option value="restaurant">Restaurant</option>
+      <option value="hotel">Hotel</option>
+      <option value="market">Market</option>
+    </select>
+    <input type="submit">
+</form>
+    <div id="map"></div>
+</body>
+</html>
+
